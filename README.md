@@ -27,10 +27,10 @@ which is used as a model to write the MATLAB code to reduce the noise fluctuatio
 ***Noisy and Clean ECG Signals with Sigma = 0.2, 0.5, and 0.7***
 ![image](https://github.com/user-attachments/assets/4b9a4635-d94e-480e-8883-04e83a9245c8)
 e
-**Noisy and Filtered ECG Signals with Sigma = 0.2, 0.5, and 0.7 with Filter Order M = 10**
+***Noisy and Filtered ECG Signals with Sigma = 0.2, 0.5, and 0.7 with Filter Order M = 10***
 ![image](https://github.com/user-attachments/assets/76725daa-7792-456c-95ac-c9f33e7b9e85)
 
-**Noisy and Filtered ECG Signals with Sigma = 0.2 with Filter Order M = 10, 50, and 100**
+***Noisy and Filtered ECG Signals with Sigma = 0.2 with Filter Order M = 10, 50, and 100***
 ![image](https://github.com/user-attachments/assets/d9bcf491-541e-4d18-922c-3b7a2ccbbacd)
 
 - [ ] add other proj
