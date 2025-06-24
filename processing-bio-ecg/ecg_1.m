@@ -19,14 +19,14 @@ for i = 1:length(sigmas)
     % Add labels and titles
     xlabel('Sample index n');
     ylabel('Amplitude');
-    title(['Comparison of Noisy and Clean ECG Signals (Sigma = ', num2str(sigma), ')']);
+    title(['Noisy and Clean ECG Signals (Sigma = ', num2str(sigma), ')']);
     legend('x[n] - Noisy ECG signal', 's[n] - Clean ECG signal');
     grid on;
 end
 
 
 %-----------------------------------------------
-% Plot diff sigmas (sigma = 0.2, 0.5, 0.7) w/ same order filter (N = 10)
+% Plot diff sigmas (sigma = 0.2, 0.5, 0.7) w/ same order filter (M = 10)
 M = 10;
 h = ones(1,M+1)/(M+1);      % h is the moving avg FIR filter
 
