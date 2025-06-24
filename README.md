@@ -35,5 +35,5 @@ which is used as a model to write the MATLAB code to reduce the noise fluctuatio
 ![image](https://github.com/user-attachments/assets/d9bcf491-541e-4d18-922c-3b7a2ccbbacd)
 
 - [ ] add other proj
-[^1]: [ECG signal generator](.processing-bio-ecg/ecg.m)
+[^1]: [ECG signal generator](/processing-bio-ecg/ecg.m)
 [^2]: D. G. Manolakis and V. K. Ingle, Applied Digital Signal Processing, 1st ed. Cambridge University Press, 2011, pp. 66–67.
