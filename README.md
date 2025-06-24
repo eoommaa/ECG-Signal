@@ -1,4 +1,4 @@
-# ECG-Signal
+# ECG Signal
 ## Processing Bio (ECG) Signal
 - Electrocardiography - The process of producing an electrocardiogram (ECG), a recording of the heart’s electrical activity through repeated cardiac cycles
 - ECG records impulses to display how fast the heart is beating, rhythm of the heartbeats, and the timing of electrical impulses as they move through different parts of the heart
