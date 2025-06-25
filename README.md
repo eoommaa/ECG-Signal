@@ -9,7 +9,7 @@
   - Also sampled at F<sub>s</sub> = 500 Hz
 - $s[n]$ - Clean ECG signal
 - $y_{filter}[n]$ - Output ECG signal using the MATLAB function `filter`
-- Task in Processing Bio Signal is to reduce the noise fluctuations by filtering or processing $x[n]$ using a moving average Finite Impulse Response (FIR) filter of length $M+1$ by using the MATLAB function `conv`
+- **Task:** Reduce the noise fluctuations by filtering or processing $x[n]$ using a moving average Finite Impulse Response (FIR) filter of length $M+1$ by using the MATLAB function `conv`
 - Results were used to determine the ideal sigma values and filter order $M$ of ECG signals to determine medical diagnostics
 
 Adapted from M&I[^2], the moving average filter is expressed as:
@@ -38,9 +38,9 @@ which is used as a model to write the MATLAB code to reduce the noise fluctuatio
 - $s[n]$ - Clean ECG signal
 - $ecg_{1}[n]$ - Four ECG pulses of length 500 samples concatenated to create a 2000 samples long signal
 - $s_{1/2}[n]$ - 500 and 2000 length 60 Hz cosine signal with 0.2 amplitude and 0 phase sampled at F<sub>s</sub> = 500 Hz, same as the signal $ecg_{1}[n]$ respectively
-- $x[n]$ - Noisy ECG signal expressed as $x[n] = ecg1[n] + s[n]$
+- $x[n]$ - Noisy ECG signal expressed as $x[n] = ecg_{1}[n] + s[n]$
 - $y[n]$ - Output ECG signal using the MATLAB functions `designfilt`[^3] and `filtfilt`[^4]
-- Task in Filtering of an ECG Signal Corrupted by Power Supply Hum is to remove the 60 Hz interference from the noisy signal $x[n]$ by using a IIR notch filter
+- **Task:** Remove the 60 Hz interference from the noisy signal $x[n]$ by using a IIR notch filter
   - Implemented by using the MATLAB functions `designfilt` to design a bandstop filter of a bandwidth of 2 Hz centered on 60 Hz to remove the interference
 
 ### Results
