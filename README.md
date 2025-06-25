@@ -2,6 +2,7 @@
 - Electrocardiography - The process of producing an electrocardiogram (ECG), a recording of the heart’s electrical activity through repeated cardiac cycles
 - ECG records impulses to display how fast the heart is beating, rhythm of the heartbeats, and the timing of electrical impulses as they move through different parts of the heart
 - Helpful device in medicine used to detect heart-related issues and other health conditions
+- ***Note: Both of the projects uses the same ECG signal generator file[^1]***
 ## Processing Bio (ECG) Signal
 **ECG Signals, Functions, and Filtering Task**
 - `ecg` - ECG signal generator or function from MATLAB[^1]
