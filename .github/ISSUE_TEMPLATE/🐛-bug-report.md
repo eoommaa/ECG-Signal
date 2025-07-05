@@ -1,7 +1,7 @@
 ---
 name: "\U0001F41B Bug Report"
 about: Critters in the code
-title: "[\U0001F41B]"
+title: ''
 labels: bug
 assignees: ''
 
