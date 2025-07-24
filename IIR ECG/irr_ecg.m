@@ -5,7 +5,7 @@ nn = 0:N-1;     % Sample vector
 sn = ecg(N);        % s[n] is the clean ECG signal
 
 % Create a subplot for clean ECG signal of 500 & 2000 samples respectively by concatenating four 500-sample ECG pulses
-figure;
+figure('Position', [0, 0, 790, 720]);
 
 % Plot the clean ECG signal of 500 samples
 subplot(2,1,1)
@@ -51,7 +51,7 @@ t2 = n2/Fs;
 sn2 = 0.2*cos(2*pi*60*t2); 
 
 % Create a subplot for 60 Hz cosine signals s1[n] & s2[n]
-figure;
+figure('Position', [0, 0, 790, 720]);
 
 % Plot 60 Hz cosine signal s1[n] of 500 samples
 subplot(2,1,1)
@@ -87,7 +87,7 @@ d = designfilt('bandstopiir', 'FilterOrder', 2, ...       % 'designfilt' to desi
 yn = filtfilt(d, xn);       % y[n] is the output signal after filtering the messy ECG signal x[n] w/ 'filtfilt'
 
 % Create a subplot for x[n], x[n] & y[n], and y[n]
-figure;
+figure('Position', [0, 0, 790, 720]);
 
 % Plot corrupted signal x[n]
 subplot (3,1,1)
@@ -128,7 +128,7 @@ grid on
 
 %-----------------------------------------------
 % Plot to compare 2000 samples long ECG signal and filtered ECG signal
-figure;
+figure('Position', [0, 0, 790, 720]);
 plot(nn, ecg1, 'LineWidth', 1.5);
 hold on;        % Keeps the first plot, so second one can be plotted
 plot(nn, yn);
