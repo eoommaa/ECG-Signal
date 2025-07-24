@@ -18,13 +18,13 @@
   
 ### Results
 ***Noisy and Clean ECG Signals with Sigma = 0.2, 0.5, and 0.7***
-![image](https://github.com/user-attachments/assets/4b9a4635-d94e-480e-8883-04e83a9245c8)
+![image](./plots/processing_bio_ecg_1.png)
   
 ***Noisy and Filtered ECG Signals with Sigma = 0.2, 0.5, and 0.7 with Filter Order M = 10***
-![image](https://github.com/user-attachments/assets/76725daa-7792-456c-95ac-c9f33e7b9e85)
+![image](./plots/processing_bio_ecg_2.png)
   
 ***Noisy and Filtered ECG Signals with Sigma = 0.2 with Filter Order M = 10, 50, and 100***
-![image](https://github.com/user-attachments/assets/d9bcf491-541e-4d18-922c-3b7a2ccbbacd)
+![image](./plots/processing_bio_ecg_3.png)
 
 
 ## Filtering of an ECG Signal Corrupted by Power Supply Hum
@@ -39,16 +39,16 @@
 
 ### Results
 ***Clean ECG Signals (500 and 2000 Samples)***
-![image](https://github.com/user-attachments/assets/065a8f2e-6953-40ee-a88d-a4e3ab2968be)
+![image](./plots/iir_ecg_1.png)
   
 ***60 Hz Cosine Signals Sampled at 500 Hz (500 and 2000 Samples)***
-![image](https://github.com/user-attachments/assets/21612618-e0a6-4c43-869c-1628fdb24d1f)
+![image](./plots/iir_ecg_2.png)
 
 ***60 Hz Interference and Filtered ECG Signals***
-![image](https://github.com/user-attachments/assets/d7d8fcd2-e77f-4521-b546-f54173f24a3e)
+![image](./plots/iir_ecg_3.png)
   
 ***Clean and Filtered ECG Signals (2000 Samples)***
-![image](https://github.com/user-attachments/assets/fc3685d3-8715-46a6-ba65-34a9c7a9fe59)
+![image](./plots/iir_ecg_4.png)
 
 
 [^1]: [ECG signal generator](https://github.com/eoommaa/ECG-Signal/blob/c226983dcf1e0dbb263750cd5978ac46688e0c86/processing-bio-ecg/ecg.m)
