@@ -35,7 +35,7 @@
 - $x[n]$ - Noisy ECG signal expressed as $x[n] = ecg_{1}[n] + s[n]$
 - $y[n]$ - Output ECG signal using the MATLAB functions `designfilt`[^3] and `filtfilt`[^4]
 - **Task:** Remove the 60 Hz interference from the noisy signal $x[n]$ by using a IIR notch filter
-  - Implemented by using the MATLAB function `designfilt` to design a [bandstop filter of a bandwidth of 2 Hz centered on 60 Hz](https://github.com/eoommaa/ECG-Signal/blob/e276e31c323aecf55aa604f5fb15b25733d70aba/fir-iir-ecg/ecg_2.m#L83C1-L86C60) to remove the interference
+  - Implemented by using the MATLAB function `designfilt` to design a [bandstop filter of a bandwidth of 2 Hz centered on 60 Hz](https://github.com/eoommaa/ECG-Signal/blob/debce32a187ec2d91e137edbedb090c0ae70d768/IIR%20ECG/irr_ecg.m#L83-L86) to remove the interference
 
 ### Results
 ***Clean ECG Signals (500 and 2000 Samples)***
