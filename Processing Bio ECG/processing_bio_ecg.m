@@ -9,7 +9,7 @@ sigmas = [0.2, 0.5, 0.7];       % Standard deviation of the noise fluctuations
         % Larger sigma means the more noisy x[n] will look like when plotted vs n
 
 % Loop to generate and plot clean & noisy ECG signals for diff sigmas
-figure;
+figure('Position', [0, 0, 830, 780]);
 for i = 1:length(sigmas)
     sigma = sigmas(i);
     xn = sn + sigma * randn(1, N);      % x[n] is the noisy ECG signal
@@ -30,7 +30,7 @@ end
 M = 10;
 h = ones(1,M+1)/(M+1);      % h is the moving avg FIR filter
 
-figure;
+figure('Position', [0, 0, 830, 780]);
 for i = 1:length(sigmas)
     sigma = sigmas(i);
     xn = sn + sigma * randn(1, N);
@@ -53,7 +53,7 @@ end
 sigma = 0.2;
 filter_orders = [10, 50, 100];
 
-figure;
+figure('Position', [0, 0, 830, 780]);
 for i = 1:length(filter_orders)
     M = filter_orders(i);
     h = ones(1, M+1) / (M+1);       % Moving average FIR filter
