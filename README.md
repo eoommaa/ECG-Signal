@@ -2,13 +2,12 @@
 - Electrocardiography - The process of producing an electrocardiogram (ECG), a recording of the heart’s electrical activity through repeated cardiac cycles
 - ECG records impulses to display how fast the heart is beating, rhythm of the heartbeats, and the timing of electrical impulses as they move through different parts of the heart
 - Helpful device in medicine used to detect heart-related issues and other health conditions
-- ***Note: Both of the projects uses the same ECG signal generator file[^1]***
+- **Note:** Both projects (`Processing Bio ECG Signal` and `Filtering of an ECG Signal Corrupted by Power Supply Hum`) uses the same ECG signal generator MATLAB code[^1]
 
-## Processing Bio (ECG) Signal[^2]
+## Processing Bio ECG Signal[^2]
 **ECG Signals, Functions, and Filtering Task**
-- `ecg` - ECG signal generator or function from MATLAB[^1]
-- $x[n]$ - Input noisy ECG signal expressed as $x[n] = s[n] + sigma$, where sigma is $0<sigma<1$
-  - Also sampled at F<sub>s</sub> = 500 Hz
+- `ecg` - ECG signal generator to simulate ECG waveforms in MATLAB[^1]
+- $x[n]$ - Input noisy ECG signal modeled as $x[n] = s[n] + sigma$, where sigma is $0<sigma<1$ and sampled at F<sub>s</sub> = 500 Hz
 - $s[n]$ - Clean ECG signal
 - $y_{filter}[n]$ - Output ECG signal using the MATLAB function `filter`
 - **Task:** Reduce the noise fluctuations by filtering or processing $x[n]$ using a moving average Finite Impulse Response (FIR) filter of length $M+1$ by using the MATLAB function `conv`
@@ -39,7 +38,7 @@ y[n] = x[n] * h[n] = \sum_{k=-&infin;}^{+&infin;} x[k]h[n-k]
 $$
 
 - Ex: $h[n] = [\frac{1}{3}, \frac{1}{3}, \frac{1}{3}]$ is linear and time-invariance
-  - **Linearity:** For a scalar $a$, $S\\{ax[n]\\} = aS\\{x[n]\\} = ay[n]$.
+  - **Linearity:** For any scalar $a$, $S\\{ax[n]\\} = aS\\{x[n]\\} = ay[n]$.
         
     The output is $y_1[n] = \frac{1}{3} (x_1[n] +x_2[n-1] + x_3[n-2])$
     
@@ -80,7 +79,7 @@ $$
 ![image](./plots/iir_ecg_2.png)
 
 ***60 Hz Interference and Filtered ECG Signals***
-- A [bandstop filter of a bandwidth of 2 Hz centered on 60 Hz](https://github.com/eoommaa/ECG-Signal/blob/debce32a187ec2d91e137edbedb090c0ae70d768/IIR%20ECG/irr_ecg.m#L83-L86) designed using the MATLAB function `designfilt` to remove 60 Hz interference
+- A [bandstop filter of a 2 Hz bandwidth centered on 60 Hz](https://github.com/eoommaa/ECG-Signal/blob/debce32a187ec2d91e137edbedb090c0ae70d768/IIR%20ECG/irr_ecg.m#L83-L86) designed using the MATLAB function `designfilt` to remove 60 Hz interference
   
 ![image](./plots/iir_ecg_3.png)
   
@@ -88,7 +87,7 @@ $$
 ![image](./plots/iir_ecg_4.png)
 
 
-[^1]: [ECG signal generator](https://github.com/eoommaa/ECG-Signal/blob/c226983dcf1e0dbb263750cd5978ac46688e0c86/processing-bio-ecg/ecg.m)
+[^1]: ECG signal generator: MATLAB code [`ecg.m`](https://github.com/eoommaa/ECG-Signal/blob/c226983dcf1e0dbb263750cd5978ac46688e0c86/processing-bio-ecg/ecg.m)
 [^2]: Processing Bio ECG Signal: MATLAB code [`processing_bio_ecg.m`](https://github.com/eoommaa/ECG-Signal/blob/main/Processing%20Bio%20ECG/processing_bio_ecg.m)
 [^3]: D. G. Manolakis and V. K. Ingle, Applied Digital Signal Processing, 1st ed. Cambridge University Press, 2011, pp. 66–67.
 [^4]: Filtering of an ECG Signal Corrupted by Power Supply Hum: MATLAB code [`iir_ecg.m`](https://github.com/eoommaa/ECG-Signal/blob/main/IIR%20ECG/iir_ecg.m)
