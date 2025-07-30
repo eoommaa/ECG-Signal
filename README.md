@@ -80,6 +80,12 @@ $$
 
 ***60 Hz Interference and Filtered ECG Signals***
 - A [bandstop filter of a 2 Hz bandwidth centered on 60 Hz](https://github.com/eoommaa/ECG-Signal/blob/debce32a187ec2d91e137edbedb090c0ae70d768/IIR%20ECG/irr_ecg.m#L83-L86) designed using the MATLAB function `designfilt` to remove 60 Hz interference
+
+```matlab
+% Filter the messy signal x[n] using 2nd order IIR notch filter of bandwidth = 2 Hz w/ 'designfilt'
+d = designfilt('bandstopiir', 'FilterOrder', 2, 'HalfPowerFrequency1', 59, ...
+    'HalfPowerFrequency2', 61, 'DesignMethod', 'butter', 'SampleRate', Fs);
+```
   
 ![image](./plots/iir_ecg_3.png)
   
