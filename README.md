@@ -8,7 +8,7 @@
 **ECG Signals, Functions, and Filtering Task**
 - `ecg` - ECG signal generator to simulate ECG waveforms in MATLAB[^1]
 - $x[n]$ - Input noisy ECG signal modeled as $x[n] = s[n] + sigma$, where sigma is $0<sigma<1$ and sampled at F<sub>s</sub> = 500 Hz
-- $s[n]$ - Clean ECG signal
+- $s[n]$ - Clean ECG signal generated from the function `ecg`
 - $y_{filter}[n]$ - Output ECG signal using the MATLAB function `filter`
 - **Task:** Reduce the noise fluctuations by filtering or processing $x[n]$ using a moving average Finite Impulse Response (FIR) filter of length $M+1$ by using the MATLAB function `conv`
 
@@ -64,7 +64,7 @@ $$
 
 ## Filtering of an ECG Signal Corrupted by Power Supply Hum[^4]
 **ECG Signals, Functions, and Filtering Task**
-- $s[n]$ - Clean ECG signal
+- $s[n]$ - Clean ECG signal generated from the function `ecg`
 - $ecg_{1}[n]$ - Four ECG pulses of length 500 samples concatenated to create a 2000 samples long signal
 - $s_{1/2}[n]$ - 500 and 2000 length 60 Hz cosine signal with 0.2 amplitude and 0 phase sampled at F<sub>s</sub> = 500 Hz, same as the signal $ecg_{1}[n]$ respectively
 - $x[n]$ - Noisy ECG signal expressed as $x[n] = ecg_{1}[n] + s[n]$
