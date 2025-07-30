@@ -47,7 +47,7 @@ $$
     The output is $y_d[n] = y[n-d] = \frac{1}{3} (x[n-d] + x[n-d-1] + x[n-d-2]$
 
 **Sigma Values and Filter Order $M$ Parameters**
-- **Sigma:** 0.2, 0.5, and 0.7
+- **Sigma values:** 0.2, 0.5, and 0.7
 - **Filter order $M$:** 10, 50, and 100
 - Results were used to determine the ideal sigma values and filter order $M$ of ECG signals for detecting heart-related issues and other health conditions
   
