@@ -80,10 +80,9 @@ grid on;
 % Generate the corrupted (can be noisy or unfiltered) signal x[n]
 xn = ecg1 + sn2;        % x[n] is noisy signal from the sum of ecg1[n] & s[n] signals
 
-% Filter the messy signal x[n] using 2nd order IIR notch filter w/ bandwidth = 2 Hz
-d = designfilt('bandstopiir', 'FilterOrder', 2, ...       % 'designfilt' to design the filter where bandwidth of the notch is defined by 59 to 61
-               'HalfPowerFrequency1', 59, 'HalfPowerFrequency2', 61, ...
-               'DesignMethod', 'butter', 'SampleRate', Fs);
+% Filter the messy signal x[n] using 2nd order IIR notch filter of bandwidth = 2 Hz w/ 'designfilt'
+d = designfilt('bandstopiir', 'FilterOrder', 2, 'HalfPowerFrequency1', 59, ...
+    'HalfPowerFrequency2', 61, 'DesignMethod', 'butter', 'SampleRate', Fs);
 yn = filtfilt(d, xn);       % y[n] is the output signal after filtering the messy ECG signal x[n] w/ 'filtfilt'
 
 % Create a subplot for x[n], x[n] & y[n], and y[n]
